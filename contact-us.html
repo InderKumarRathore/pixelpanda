@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <style>
+    #email-button {
+      padding: 10px 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    #email-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #333;
+      cursor: pointer;
+    }
+
+    #email-link:hover {
+      text-decoration: underline;
+      color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="email-button" onclick="revealEmail()">Contact Us</button>
+  <div id="email-container"></div>
+
+  <script>
+    function revealEmail() {
+      const parts = ["panda", "pixel", "&#46;", "hel", "&#64;", "dev", "p"];
+      const order = [3, 6, 4, 1, 0, 2, 5];
+      const emailEncoded = order.map(i => parts[i]).join('');
+
+      const emailPlain = order.map(i => {
+        return parts[i]
+          .replace('&#64;', '@')
+          .replace('&#46;', '.');
+      }).join('');
+
+      const container = document.getElementById("email-container");
+      container.innerHTML = `Please contact us via <a id="email-link" href="mailto:${emailPlain}">${emailEncoded}</a>`;
+    }
+  </script>
+
+</body>
+</html>
