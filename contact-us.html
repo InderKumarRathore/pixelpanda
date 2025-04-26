@@ -6,30 +6,61 @@
   <style>
     #email-button {
       padding: 10px 16px;
-      background-color: #4CAF50;
+      background-color: #4b8ef1;
       color: white;
       border: none;
-      border-radius: 5px;
+      border-radius: 20px;
       cursor: pointer;
       font-size: 16px;
     }
 
-    #email-link {
-      display: inline-block;
-      margin-top: 10px;
-      font-weight: bold;
-      color: #333;
+    #email-button {
+      padding: 10px 16px;
+      background-color: #4b8ef1;
+      color: white;
+      border: none;
+      border-radius: 16px;
       cursor: pointer;
-    }
+      font-size: 16px;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
 
-    #email-link:hover {
-      text-decoration: underline;
-      color: #4CAF50;
-    }
+  #email-button:hover {
+    background-color: #3a76d3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  #email-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+  }
+
+  #email-link:hover {
+    text-decoration: underline;
+    color: #4b8ef1;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    background-color: #f5f5f5;
+  }
+  #page-title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 32px;
+    margin-bottom: 24px;
+    color: #333;
+  }
   </style>
 </head>
 <body>
-
+  <h1 id="page-title">Get in Touch</h1>
   <button id="email-button" onclick="revealEmail()">Contact Us</button>
   <div id="email-container"></div>
 
@@ -49,6 +80,5 @@
       container.innerHTML = `Please contact us via <a id="email-link" href="mailto:${emailPlain}">${emailEncoded}</a>`;
     }
   </script>
-
 </body>
 </html>
