@@ -75,14 +75,14 @@
     }
 
     .back-button {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      background: rgba(255, 255, 255, 0.2);
+      position: fixed;
+      top: 30px;
+      left: 30px;
+      background: rgba(75, 142, 241, 0.9);
       border: none;
       border-radius: 50%;
-      width: 45px;
-      height: 45px;
+      width: 50px;
+      height: 50px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -91,12 +91,14 @@
       backdrop-filter: blur(10px);
       color: white;
       font-size: 18px;
-      z-index: 10;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(75, 142, 241, 0.3);
     }
 
     .back-button:hover {
-      background: rgba(255, 255, 255, 0.3);
-      transform: translateX(-3px);
+      background: rgba(75, 142, 241, 1);
+      transform: translateX(-3px) scale(1.05);
+      box-shadow: 0 6px 16px rgba(75, 142, 241, 0.4);
     }
 
     .privacy-icon {
@@ -390,10 +392,10 @@
       }
       
       .back-button {
-        top: 15px;
-        left: 15px;
-        width: 40px;
-        height: 40px;
+        top: 20px;
+        left: 20px;
+        width: 45px;
+        height: 45px;
         font-size: 16px;
       }
     }
