@@ -1564,6 +1564,7 @@ Footer Style
 */
 
 footer {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1678,6 +1679,91 @@ footer p a {
 footer p a:hover {
   opacity: 0.75;
   color: #fff;
+}
+
+/* 
+---------------------------------------------
+Beautiful Footer Links
+--------------------------------------------- 
+*/
+
+.footer-links-section {
+  padding: 40px 20px;
+}
+
+.footer-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.footer-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 30px;
+  background: rgba(75, 142, 241, 0.1);
+  border-radius: 15px;
+  color: #2a2a2a !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(75, 142, 241, 0.2);
+  min-width: 150px;
+}
+
+.footer-link:hover {
+  background: rgba(75, 142, 241, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(75, 142, 241, 0.3);
+  color: #2a2a2a !important;
+}
+
+.footer-link i {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #4b8ef1;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover i {
+  color: #4b8ef1;
+  transform: scale(1.1);
+}
+
+.footer-link span {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #2a2a2a;
+}
+
+.footer-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #4b8ef1, transparent);
+  margin: 0 auto 20px;
+}
+
+.footer-text {
+  color: #6c757d !important;
+  font-size: 14px;
+  margin: 0;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .footer-navigation {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .footer-link {
+    min-width: 200px;
+  }
 }
 
 
